@@ -37,6 +37,7 @@ void Application::run() {
     catch (const char* ex) {
         std::cout << ex;
     }
-
+    
+    delete myFile;
     return;
 }
