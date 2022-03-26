@@ -1,0 +1,25 @@
+@startuml
+class Application {
+   -bool test()
+   -bool compare_file(string path1, string path2)
+   +void run_app(string filename, string extension)
+   +void run_tests()
+}
+abstract class  MyFile {
+   #string filename
+   #string input_directory
+   #string output_directory
+   +string get_filename()
+   +{abstract} void convert()
+}
+class           MyXML {
+   +MyXML(string filename, string input_directory, string output_directory)
+   +void convert()
+}
+class           MyTXT {
+   +MyTXT(string filename, string input_directory, string output_directory)
+   +void convert()
+}
+MyFile --> MyXML : IS_A
+MyFile --> MyTXT : IS_A
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+
+(*) --> if "Choose file" then
+  -->[XML file] "open XML file"
+
+  if "is valid" then
+    -->[valid] "convert to TXT"
+    -->[conversion succesful](*)
+  else
+    -->[invalid] "throw error"
+  endif
+
+else
+
+  -->[TXT file] "open TXT file"
+
+  if "is valid" then
+    -->[valid] "convert to XML"
+    -->[conversion succesful](*)
+  else
+    -->[invalid] "throw error"
+  endif
+
+endif
+
+@enduml

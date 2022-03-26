@@ -2,8 +2,8 @@
 int main()
 {
     Application* application = new Application();
-    application->run_tests();
-    //application->run_app();
+    //application->run_tests();
+    application->run_app();
 
     return 0;
 }
